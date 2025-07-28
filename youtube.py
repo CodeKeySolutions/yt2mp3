@@ -59,5 +59,9 @@ def main():
         # Ask if user wants to download another
 
 
-if __name__ == "__main__":
-    main()
+if __name__ == '__main__':
+    import sys
+    if len(sys.argv) < 2:
+        print("Usage: python mp4_to_webm.py input.mp4")
+    else:
+        download_with_yt_dlp(sys.argv[1])
